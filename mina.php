@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Much a do-while</title>
+    <title>Nimi</title>
 </head>
 <body>
 <?php

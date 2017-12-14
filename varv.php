@@ -35,3 +35,19 @@ echo 'b = '.$b.'<br />';
 echo 'c = '.$c.'<br />';
 echo 'd = '.$d.'<br />';
 //
+$kord = 1;
+while($kord <= 5){
+    echo '<i>'.$kord.'</i><br />';
+    if($kord == 3){
+        break;
+    }
+    echo '<b>'.$kord.++'</b><br />';
+}
+//
+$kord = 1;
+do {
+    if ($kord == 3 ){
+        continue;
+    }
+    echo '<b>'.$kord.'</b><br />';
+}while(++$kord <= 5);

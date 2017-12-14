@@ -19,4 +19,18 @@ for($rida = 1; $rida <=5; $rida++){
     '<br />';
 }
 //
-
+$a = 5; $b = 2;
+$c = $a++;
+$d = $b--;
+echo 'a = '.$a.'<br />';
+echo 'a = '.$a.'<br />';
+echo 'a = '.$a.'<br />';
+echo 'a = '.$a.'<br />';
+//
+$a = 5; $b = 2;
+$c = ++$a;
+$d = --$b;
+echo 'a = '.$a.'<br />';
+echo 'a = '.$a.'<br />';
+echo 'a = '.$a.'<br />';
+echo 'a = '.$a.'<br />';

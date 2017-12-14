@@ -11,7 +11,7 @@ function tabel ($sona1, $sona2, $sona3, $sona4){
             echo '<tr>';
                 echo '<td>';
                 // muutuja genereerimine ${}
-                    echo ${'sona'}.$rida;
+                    echo ${'sona'.$rida};
                 echo '</td>';
             echo '</tr>';
     }

@@ -28,9 +28,7 @@ function arvuSumma($number){
         $number = $number / 10;
         settype($number, 'integer');
     }
-    echo 'Võtame suvalise numbri: '.$number.'<br/>';
-    echo 'Numbri arvude summa on:'.$summa.'<br />';;
+    return $summa;
 }
- arvuSumma( 1233);
-
-?>
+$number = 1666;
+echo 'Numbri '.$number.' arvude summa on '.arvuSumma($number).'<br />';

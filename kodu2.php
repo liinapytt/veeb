@@ -16,7 +16,7 @@ function otsiNumber($suvaArv, $kindelArv){
             $arvKordi++;
         }
         $suvaArv = $suvaArv / 10;
-        settype($suvaArv, 'integer');
+        settype($suvaArv,'integer');
     }
     echo '  '.$arvKordi.'  korda<br />';
 

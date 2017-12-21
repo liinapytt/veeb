@@ -89,6 +89,22 @@ echo '<hr />';
  * Kontrolli kas kohad on vahetatud kasutades
  * valjastaMassiiv funktsiooni
 */
+function vahetaMinMax(&$massiiv){ /*otse parameetri muutmiseks kasutan & märki*/
+    $min = min($massiiv);
+    $max = max($massiiv);
+    echo 'Miiinimum= '.$min.'<br/>';
+    echo 'Maximum= '.$max.'<br/>';
+    for ($i= 0; $i < count($massiiv); $i++){
+        if($massiiv[$i] == $min){
+            $massiiv[$i] = $max;
+        } else if ($massiiv[$i] == $max){
+            $massiiv[$i] = $min;
+        }
+        echo $massiiv[$i].'<br/>';
+    }
+}
+vahetaMinMax($testMassiiv);
+valjastaMassiiv($testMassiiv);
 
 /*
  * 4.

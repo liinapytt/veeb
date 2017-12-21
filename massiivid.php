@@ -20,7 +20,7 @@ echo '<pre>';
 print_r($arvud);
 echo '<pre>';
 
-// korralik väljastus for või foreasch tsükli abil
+// korralik väljastus for või foreach tsükli abil
 for($i = 0; $i < count($arvud); $i++){
     echo '<b>'.$arvud[$i].'</b><br/>';
 }
@@ -39,6 +39,19 @@ foreach ($arvud1 as $arv){
  * põhiprogrammile ja kontrollida sisu
  * testväljastuse abil - näiteks print_r
  * */
+function looMassiiv($elemArv){
+    $massiiv = array();
+    for ($kord=1; $kord<= $elemArv; $kord++){
+        $juhuarv = rand(100, 999);
+        $massiiv[] = $juhuarv;
+    }
+    return $massiiv;
+}
+$testMassiiv = looMassiiv(5);
+echo '<pre>';
+print_r($testMassiiv);
+echo '</pre>';
+echo '<hr />';
 
 /*
  * 2.

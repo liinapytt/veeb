@@ -62,6 +62,20 @@ echo '<hr />';
  * Väljundi loomisel kasutada foreach
  * tsükkel
  * */
+function valjastaMassiiv($massiiv){
+    echo '<table border="1">';
+    foreach ($massiiv as $element){
+        echo '<tr>';
+            echo '<td>';
+            echo $element;
+            echo '</td>';
+        echo '</tr>';
+    }
+    echo '</table>';
+}
+
+valjastaMassiiv($testMassiiv);
+echo '<hr />';
 
 /*
  * 3.

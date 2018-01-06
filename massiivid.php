@@ -103,8 +103,9 @@ function vahetaMinMax(&$massiiv){ /*otse parameetri muutmiseks kasutan & märki*
         echo $massiiv[$i].'<br/>';
     }
 }
-vahetaMinMax($testMassiiv);
 valjastaMassiiv($testMassiiv);
+vahetaMinMax($testMassiiv);
+
 
 /*
  * 4.

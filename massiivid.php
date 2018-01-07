@@ -154,3 +154,18 @@ echo '<hr />';
  * tsükli abil, samuti EI SAA kasutada
  * grupeerimisfunktisoone ega muuta antud massiivi
  * */
+function mitteDubleeri($massiivDub){
+    $tempar = array();
+    $tempar[0] = $massiivDub[0];
+    $i = 0;
+
+    foreach ($massiivDub as $vaartus) {
+        if ($tempar[$i] != $vaartus) {
+            array_push($tempar, $vaartus);
+            $i++;
+        }
+    }
+    return $tempar;
+}
+$naidisDub = array(1, 1, 1, 2, 2, 2, 2, 3);
+print_r("Unikaalsed väärtused on: ".implode(",",mitteDubleeri($naidisDub)));

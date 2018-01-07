@@ -119,6 +119,29 @@ vahetaMinMax($testMassiiv);
  * Tulemus: 1 * 6 * 5 = 30
 */
 
+
+/**
+ * @param $massiivUus
+ * @return int
+ */
+function elementideKorrutis($massiivUus){
+    $korrutis = 1;
+    foreach($massiivUus as $element) {
+        $i = array_search($element, $massiivUus);
+        if ($massiivUus[$i] > 0 && $i % 2 == 0) {
+            $korrutis *= $element;
+            echo "element on : ". $element . '<br>';
+        }
+    } return "Tulemus : ".$korrutis;
+    }
+$naidis = array(1,0,6,0,0,3,5);
+$tulemus = elementideKorrutis($naidis);
+echo '<pre>';
+print_r($tulemus);
+echo '</pre>';
+echo '<hr />';
+
+
 /*
  * 5.
  * Töötluses kasutada massiiv

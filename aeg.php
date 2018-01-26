@@ -1,4 +1,5 @@
 <?php
+/* katsetame ajatöötluse võimalusi*/
 
 function paev(){
     $valik = '<select name="paev">';

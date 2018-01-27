@@ -18,13 +18,13 @@ function vorm(){
 
 
     $serveriArv = isset($serveriArv) ? $serveriArv: rand(1,20);     //juhul kui on määratud
-    $korrad = isset($korrad) ? $korrad: 0;
+    $korrad = isset($korrad) ? ++$korrad: 0;
     echo 'Mõtle välja arv vahemikus 1-20'.'<br/>';                  // väljastan millises vahemikus genereeritakse arv
     echo '
-    <form action="mang.php" method="post">
+    <form action="'.$_SERVER['PHP_SELF'].'" method="post">
     <input type="hidden" name="serveriArv" value="'.$serveriArv.'">
-    <input type="text" name="kasutajaArv"><br />
     <input type="hidden" name="korrad" value="'.$korrad.'">
+    <input type="text" name="kasutajaArv"><br />
     <input type="submit" value="Kontrolli">
     
     </form>
@@ -53,22 +53,19 @@ function vormiAndmed(){
 function arvuKontroll($kasutajaArv, $serveriArv, $korrad){
     if($kasutajaArv > $serveriArv) {
         echo ' Pakutud väärtus on suurem<br/>';
-        $korrad++;
     }
     if($kasutajaArv < $serveriArv) {
         echo 'Pakutud arv on väiksem<br/>';
-        $korrad++;
     }
     if(abs($serveriArv - $kasutajaArv) <= 5){
-        $korrad++;
         if($kasutajaArv == $serveriArv){
-            echo 'Õnnitlen! Arvasid ära!<br/>'.'Arvasid ära '.$korrad.' korraga';
-        } else{
+            echo 'Õnnitlen! Arvasid ära!<br/>'.'Arvasid ära '.++$korrad.' korraga';
+            exit;
+        }
             echo 'Aga oled juba väga lähedal<br/>';
         }
     }
-   return $korrad;
-}
+
 
 vorm();
 
